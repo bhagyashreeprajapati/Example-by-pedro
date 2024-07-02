@@ -1,0 +1,141 @@
+// only show the even numbers from the array
+let values=[ 12, 35, 18, 3, 11, 25, 18 ];
+
+// imperative/procedural version
+let evenValues=[];
+for (let pos=0; pos<values.length; pos++) {
+    if (values[pos] % 2 === 0) {
+        evenValues.push(values[pos]);
+    }
+}
+console.log(evenValues);
+
+// declarative/functional programming version
+// the filter method returns true or false dependending on the condition
+let evenValues2=values.filter(value => value % 2 === 0);
+console.log(evenValues2);
+
+let evenValues3=values.filter(function(value) {
+    return value % 2 === 0;
+});
+console.log(evenValues3);
+
+let evenValues4=values.filter(function(value) {
+   if (value % 2 === 0) {
+    return true;
+   } else {
+    return false;
+   }
+});
+console.log(evenValues4);
+
+let evenNumbers = n => n % 2 === 0;
+let evenValues5=values.filter(evenNumbers);
+console.log(evenValues5);
+
+// list of functional programming methods
+/*
+every
+filter
+find
+findIndex
+flat
+flatMap
+forEach
+map
+reduce
+reduceRight
+some
+*/
+
+// add 5 to each value in the array
+// imperative version
+let plusFive=[];
+for (let value of values) {
+    let newValue=value+5;
+    plusFive.push(newValue);
+}
+console.log(plusFive);
+
+// declarative version
+let plusFive2=values.map(value => value+5);
+console.log(plusFive2);
+
+let evenValues6=values.map(value => value % 2 === 0);
+console.log(evenValues6); // [true, false, true, false, false, false, true]
+
+let evenValues7=values.map(value => value % 2);
+console.log(evenValues7); // [0, 1, 0, 1, 1, 1, 0]
+
+// create a new array with the names which start with an M and convert them to uppercase
+let students=['Mary', 'Jasmina', 'Usha', 'Anna', 'Miriam', 'Bhagyashree', 'Pedro'];
+
+// let specialStudents=[ "MARY", "MIRIAM" ];
+let specialStudents=students.filter(name => name.toUpperCase().startsWith("M"));
+console.log(specialStudents); // ['Mary', 'Miriam']
+let specialStudentsUpperCase=specialStudents.map(name => name.toUpperCase());
+console.log(specialStudentsUpperCase); // ['MARY', 'MIRIAM']
+
+// chaining - dot notation
+let specialStudents2=students.filter(name => name.toUpperCase().startsWith("M")).map(name => name.toUpperCase());
+console.log(specialStudents);
+
+// let instructor="Pedro"; // OR
+// console.log(instructor.slice(3).toUpperCase().split("").reverse().join(""));
+// console.log(instructor);
+
+// sum all the values from the "values" array
+let total=0;
+for (let value of values) {
+    total+=value;
+}
+console.log(total); // 122
+
+// filter(value => name==="Usha" && month==="April").reduce((total,value) => total+value, 0)
+// 0 is the initialValue
+let total2=values.reduce((accumulator,currentValue) => accumulator+currentValue, 0);
+console.log(total2); // 122
+
+// count the number of persons that are from germany
+let students2 = [
+    {
+        name: "Usha",
+        country: "India",
+    },
+    {
+        name: "Anna",
+        country: "Germany"
+    },
+    {
+        name: "Jasmina",
+        country: "Croatia"
+    },
+    {
+        name: "Baghyashree",
+        country: "India"
+    },
+    {
+        name: "Miriam",
+        country: "Germany"
+    }
+]
+
+let totalPersons=students2.filter(student => student.country==="Germany").length;
+console.log(totalPersons); // 2
+
+let totalPersons2=students2.reduce((total,student) => {
+    if (student.country==="Germany") {
+        total++;
+    }
+    return total;
+}, 0);
+console.log(totalPersons2);
+
+let totalPersons3=students2.reduce((total,student) => student.country==="Germany" ? total=total+1 : total, 0);
+console.log(totalPersons3);
+
+// create a sentence like "Usha is from India" using the data from all of the elements in the students2 array
+// let sentences=students2.map(student => `${student.name} is from ${student.country}`);
+let sentences=students2.map(student => student.name+" is from "+student.country);
+console.table(sentences);
+

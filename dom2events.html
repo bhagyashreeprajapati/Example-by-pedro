@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #collapseContent{
+            padding: 10px;
+            border:1px solid #000;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p><button type="button" id="btCollapse">Show collapse</button></p>
+    <section id="collapseContent" class="hide">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cupiditate amet molestias laudantium
+            sunt et, quisquam odit eius labore quidem repudiandae quis quam eum dignissimos. Temporibus dolores odio
+            explicabo tempora!</p>
+        </section>
+        
+        <script>
+            // click - event
+            // onclick - event handler
+            // document.querySelector("#btChangeText").onclick = function () {
+                //     // anonymous function
+                //     document.querySelector("#para").textContent = "Changed text";
+                // }
+                
+                function showText() {
+                    document.querySelector("#para").textContent = "Changed text";
+                }
+                
+                // showText - callback
+                document.querySelector("#btChangeText").onclick = showText;
+                
+                // event listener
+                // document.querySelector("#para").addEventListener("click", function () {
+                    //     // this.style.color = "blue";
+                    //     document.querySelector("#para").style.color = "blue";
+                    // })
+                    
+                    let paragraph = document.querySelector("#para");
+                    paragraph.addEventListener("click", function () {
+                        paragraph.style.color = "blue";
+                    });
+                    
+                    let collapseContentReference = document.querySelector("#collapseContent");
+                    document.querySelector("#btCollapse").addEventListener("click", function () {
+                        // document.querySelector("#collapseContent").style.display = "block";
+                        // this.parentElement.nextElementSibling.style.display = "block";
+                        // You will get the following error when you are referencing an inexistent element
+                        // Cannot read properties of null(reading 'style')
+                        
+                        // if (document.querySelector("#collapseContent").style.display === "block") {
+                            //     document.querySelector("#collapseContent").style.display = "none";
+                            // } else {
+                                //     document.querySelector("#collapseContent").style.display = "block";
+                                // }
+                                
+                                // if (collapseContentReference.style.display === "block") {
+                                    //     collapseContentReference.style.display = "none";
+                                    // } else {
+                                        //     collapseContentReference.style.display = "block";
+                                        // }
+                                        
+                                        // collapseContentReference.style.display = collapseContentReference.style.display === "block" ? "none" : "block";
+                                        
+                                        // if (collapseContentReference.classList.contains("hide")===true)
+                                        // if (collapseContentReference.classList.contains("hide")) {
+                                            //     collapseContentReference.classList.remove("hide");
+                                            // } else {
+                                                //     collapseContentReference.classList.add("hide");
+                                                // }
+                                                
+                                                collapseContentReference.classList.toggle("hide");
+                                                
+                                            });
+                                        </script>
+                                    </body>
+                                    </html>

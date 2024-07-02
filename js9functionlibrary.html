@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let values=[ 12, 35, 18, 3, 11, 25, 18 ];
+        // let result3=true;
+        // for(let value of values){
+            //     if(values<=0){
+                //         result3=false;
+                //         break;
+                //     }
+                // }
+                // console.log(result3);
+                
+                //other solution
+                
+                let result2 = false;
+                count = values.length;
+                for (let value of values) {
+                    if (value > 0) {
+                        count--;
+                        console.log(count);
+                    }
+                    if (count === 0) {
+                        result2 = true;
+                    }
+                }
+                console.log(result2);
+                
+
+                //sort by country and by the name 
+                let students2 = [
+                {
+                    name: "Usha",
+                    country: "India",
+                },
+                {
+                    name: "Anna",
+                    country: "Germany"
+                },
+                {
+                    name: "Jasmina",
+                    country: "Croatia"
+                },
+                {
+                    name: "Baghyashree",
+                    country: "India"
+                },
+                {
+                    name: "Miriam",
+                    country: "Germany"
+                }
+                ]
+            </script>
+        </body>
+        </html>

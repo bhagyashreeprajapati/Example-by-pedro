@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Accodian</title>
+    <style>
+        #accordion {
+            width: 400px;
+        }
+        
+        #accordion>h2 {
+            background-color: black;
+            color: white;
+            user-select: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0;
+        }
+        
+        #accordion>section {
+            border: 1px solid #000;
+            padding: 15px;
+        }
+        
+        #accordion>section:not(:first-of-type) {
+            display: none;
+        }
+        
+        /* #accordion>h2:hover+section {
+        display: block;
+        } */
+    </style>
+</head>
+<body>
+    <section id="accordion">
+        <h2>Option 2</h2>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem eveniet voluptate cupiditate
+                necessitatibus ea veritatis laboriosam dignissimos quibusdam voluptatibus aut. Hic perspiciatis aliquam
+                ut cum dolores modi velit nobis dolor?</p>
+            </section>
+            <h2>Option 1</h2>
+            <section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum odit facere aliquam. Omnis odio ratione
+                    neque blanditiis suscipit, temporibus consequatur aliquam excepturi porro vero facere quae reiciendis
+                    sunt, placeat eos?</p>
+                </section>
+                <h2>Option 3</h2>
+                <section>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore laborum cumque provident nulla eius
+                        animi quasi doloribus earum, consequatur eos fugit vero blanditiis voluptatum cupiditate, nesciunt
+                        aperiam quo, deserunt nostrum.</p>
+                    </section>
+                </section>
+                
+                <!-- Javascript For Accodian -->
+                <script>
+                    
+                    // let titles2 = document.getElementById("accordion").getElementsByTagName("h2");
+                    // titles is an array/nodelist
+                    let titles = document.querySelectorAll("#accordion>h2");
+                    // console.log(titles);
+                    for (let title of titles) {
+                        title.addEventListener("click", function () {
+                            if (window.getComputedStyle(this.nextElementSibling).getPropertyValue('display') === "block") {
+                                this.nextElementSibling.style.display = "none";
+                            } else {
+                                // title.nextElementSibling.style.display = "block";
+                                this.nextElementSibling.style.display = "block";
+                            }
+                            for (let title of titles) {
+                                if (title !== this) {
+                                    title.nextElementSibling.style.display = "none";
+                                }
+                            }
+                        });
+                    }
+                    
+                </script>
+            </body>
+            </html>

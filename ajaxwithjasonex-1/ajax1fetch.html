@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Fetch API</title>
+    <link rel="stylesheet" href="ajax1fetch.css">
+</head>
+
+<body>
+    <p><button id="btGetPosts">Get posts</button></p>
+    <table id="tablePosts">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Total number of posts: <span id="totalNumberPosts"></span></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <section id="loader">
+        <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+    <script src="ajax1fetch.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+#tableTasks {
+    border-collapse: collapse;
+    /* display: none; */
+}
+
+#tableTasks,
+#tableTasks th,
+#tableTasks td {
+    border: 1px solid #000;
+}
+
+#tableTasks th,
+#tableTasks td {
+    padding: 10px 20px;
+}
+
+#tableTasks thead tr {
+    background-color: black;
+    color: white;
+}
+
+#tableTasks tfoot tr {
+    background-color: #666;
+    color: white;
+}
+
+#tableTasks tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+#tableTasks tbody tr:hover {
+    background-color: #999;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>For the following array,
+        let values = [1, 3, 3, 5, 6];
+        the result should be (show the results on the console):
+        1,5
+        3,3</h1>
+
+    <script>
+        // one result
+        // let sumResult=6;
+        // let results=[];
+        let values = [1, 3, 3, 5, 6];
+        // for(let i=0; i<values.length-1; i++){
+        //     // console.log(values[i]);// 
+        //     for(let j=i+1; j<values.length; j++){
+        //         // console.log(values[i]+"/"+values[j]);
+        //         if(values[i] + values[j] === sumResult){
+        //             console.log(values[i]+"/"+values[j]);
+        //             results.push(values[i],values[j]);
+        //         }
+        //     }
+        // }
+        // console.log(results);// 1/5 , 3/3
+        // console.table(results);// table value with index
+
+        //second result
+        let results2=[];
+        let sumResult2=6;
+        let leftPointer=0;
+        let rightPointer=values.length-1;
+            while(leftPointer!==rightPointer){
+                let sum=values[leftPointer]+values[rightPointer];
+                if(sum=== sumResult2){
+                    results2.push([values[leftPointer], values[rightPointer]]);
+                    // rightPointer--;
+                }else{
+                    if(sum>sumResult2){
+                        rightPointer--;
+                    }else{
+                        leftPointer++;
+                    }
+                }
+
+                // leftPointer++;
+            }
+        console.log(results2);
+        console.table(results2);
+    </script>
+</body>
+</html>

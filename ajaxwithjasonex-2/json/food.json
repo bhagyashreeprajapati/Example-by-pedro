@@ -1,0 +1,17 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "Bank Bao",
+            "description": "gedämpftes Hefebrötchen mit einem Soja-Patty, Röstzwiebeln und einer Hoisin-Chili Sauce",
+            "price": 5.50
+        },
+        {
+            "id": 2,
+            "name": "Feel Cood",
+            "description": "Frischer Papayasalat mit Karotten, gerosteten Erdnüssen und einem Limetten- Chili- Dressing",
+            "price": 5.50
+        }
+    ],
+    "drinks": []
+}

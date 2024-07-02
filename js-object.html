@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Object</title>
+</head>
+<body>
+    <h1>About Object</h1>
+    <script>
+        let person1=["pedro", 25, "portugal" , true];
+        let person2=["Usha", "Bangluru", true , 18];
+        // literal Object (dictionary, associative array, hash table in other programming lang. )
+        let person={
+            name: "pedro remoaldo",
+            city: "portugal",
+            age: 25,
+            married: true
+            // "number of children" : 0,
+            // "numberofchildren" : 0,
+            // "number_of_children" : 0,
+
+        }
+        console.log(person.name + " - " + person.age);
+
+        let personInfo={
+            name: "pedro remoaldo",
+            // city: "portugal",
+            age: 25,
+            married: true,
+            address:{
+                street :"Hertogestrasse 17",
+                city:"hamburg",
+                postalcode:"25111 ",
+                country:"germany",
+            },
+            contact:{
+                email:"bhagyashreecharolia.gmail.com",
+                phoneNumber:[22449838, 9837723287872]
+            }
+            // "number of children" : 0,
+            // "numberofchildren" : 0,
+            // "number_of_children" : 0,
+
+        }
+        console.log(personInfo.name);
+        console.log(personInfo.address.city);
+        console.log(personInfo.contact.phoneNumber[1]);
+
+        // Array of object
+
+        let students=[
+            {
+                name: "Bhagyashree",
+                country: "India"
+            },
+            {
+                name: "Anna",
+                country: "Germany"
+            },
+            {
+                name: "Usha",
+                country: "India"
+            }
+        ]
+        for(student of students){
+            console.log(student.name);
+        }
+        for(country2 of students){
+            console.log(country2.country);
+        }
+
+
+        //show the students name in uppercase
+        // for(student of students){
+        //     console.log(student.name.toUppercase());
+        // }
+        //show only student name which the start with M
+        for(student of students){
+            // if(students.name[0] ==="M")
+            if(student.name.charAt(0)==="U"){
+                console.log(student.name);
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAUJ Restaurant</title>
+    <link rel="stylesheet" href="food.css">
+</head>
+
+<body>
+    <form id="formFood">
+        <h1>Create a new menu item</h1>
+        <p><label for="name">Name:</label> <input type="text" id="name"></p>
+        <p><label for="description">Description:</label> <input type="text" id="description"></p>
+        <p><label for="price">Price:</label> <input type="number" id="price"> €</p>
+        <p><label for="categoriesList">Category:</label> <select id="categoriesList"></select></p>
+        <p><input type="button" value="Create food" id="btSubmitFormFood"><input type="button" value="Update food"
+                id="btUpdateFormFood"><input type="button" value="Cancel update" id="btCancelUpdate"></p>
+        <input type="hidden" id="itemId" value="">
+    </form>
+    <section id="menu">
+
+    </section>
+    <script src="food.js"></script>
+</body>
+
+</html>

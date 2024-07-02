@@ -1,0 +1,10 @@
+.menuItem {
+    background-color: cyan;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#btUpdateFormFood,
+#btCancelUpdate {
+    display: none;
+}

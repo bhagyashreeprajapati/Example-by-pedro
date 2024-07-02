@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - DOM - Todo</title>
+    <link rel="stylesheet" href="dom5todo_b.css">
+</head>
+
+<body>
+    <form>
+        <h1>Todos</h1>
+        <p><label for="task">Task:</label> <input type="text" id="task" name="task" autofocus></p>
+        <p><label for="date">Date:</label> <input type="date" id="date" name="date"></p>
+        <p><button type="button" id="btInsertTask">Insert task</button></p>
+    </form>
+    <p><label for="searchTask">Task to search:</label> <input type="text" id="searchTask"> <input type="button"
+            id="btSearch" value="Search"> <input type="button" id="btClearSearch" value="Clear Search"></p>
+    <p id="errorMsg">There are no defined tasks.</p>
+    <table id="tableTasks" class="hidden">
+        <thead>
+            <tr>
+                <th id="thOrderByTask">Task</th>
+                <th>Date</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total number of tasks: <span id="totalNumberTasks"></span></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="dom5todo_b.js"></script>
+</body>
+
+</html>

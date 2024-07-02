@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Slider</title>
+    <link rel="stylesheet" href="dom6slider.css">
+    <style>
+        /* 1024x768px */
+        
+        .slider {
+            position: relative;
+            /* white-space: nowrap; */
+            text-wrap: nowrap;
+            font-size: 0;
+            width: 1024px;
+            height: 768px;
+            box-sizing: border-box;
+            border: 10px solid #000;
+            overflow: hidden;
+        }
+        
+        .btLeft,
+        .btRight {
+            position: absolute;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .btLeft {
+            top: 0;
+            left: 0;
+        }
+        
+        .btRight {
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="slider">
+        <img src="gallery/Chrysanthemum.jpg" alt="Chrysanthemum" title="Chrysanthemum">
+        <img src="gallery/Desert.jpg" alt="Desert" title="Desert">
+        <img src="gallery/Hydrangeas.jpg" alt="Hydrangeas" title="Hydrangeas">
+        <img src="gallery/Jellyfish.jpg" alt="Jellyfish" title="Jellyfish">
+        <img src="gallery/Koala.jpg" alt="Koala" title="Koala">
+        <img src="gallery/Lighthouse.jpg" alt="Lighthouse" title="Lighthouse">
+        <img src="gallery/Penguins.jpg" alt="Penguins" title="Penguins">
+        <img src="gallery/Tulips.jpg" alt="Tulips" title="Tulips">
+        <span class="btLeft">&lt;</span>
+        <span class="btRight">&gt;</span>
+    </section>
+    
+    <script src="dom6slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JavaScript</title>
+</head>
+<body>
+    
+    <script>
+        // let student1="Jasmina";
+        // let student2="Usha";
+        // let student3="Anna";
+        let studentsOldWay=new Array("Jasmina", "Usha", "Anna");
+        console.log(studentsOldWay);
+        // modern way
+        let students=["Jasmina", "Usha", "Anna"];
+        console.log(students);
+        console.table(students);
+
+        console.log(students[0]);
+
+        // add a new element to the end of the array
+        students[3]="Miriam";
+        console.table(students);
+        students[students.length]="Bhagyashree";
+        console.table(students);
+        students.push("Pedro");
+        console.table(students);
+        // students.push("John","Mary","Joseph");
+        // console.table(students);
+
+        // add a new element to the beginning of the array (normally used for the queue data structure)
+        students.unshift("Mary");
+        console.log(students); // ['Mary', 'Jasmina', 'Usha', 'Anna', 'Miriam', 'Bhagyashree', 'Pedro']
+
+        // "calculate" the number of elements in an array
+        let size=students.length;
+        console.log(size); // 7
+
+        // show all the elements of the students, each one in its own line - iterate an array
+        for (let pos=0; pos<students.length; pos++) {
+            console.log(students[pos]);
+        }
+
+        for (let student of students) {
+            console.log(student);
+        }
+
+        // grab more than one element from an array
+        let someStudents=students.slice(1,4);
+        console.log(someStudents); // ['Jasmina', 'Usha', 'Anna']
+
+        // grab the last 2 elements from the students array
+        let twoLastStudents=students.slice(5,7); // ['Bhagyashree', 'Pedro']
+        console.log(twoLastStudents);
+        let twoLastStudents2=students.slice(students.length-2,students.length); // ['Bhagyashree', 'Pedro']
+        console.log(twoLastStudents2);
+        let twoLastStudents3=students.slice(-2); // ['Bhagyashree', 'Pedro']
+        console.log(twoLastStudents3);
+
+        // slice(first_position, last_position) - the last position is not taken into account
+        // example: arrayName.slice(1, 5)
+        // slice(first_position) - grabs everything from the first_position till the end of the array
+        // example: arrayName.slice(5)
+        // example: arrayName.slice(-5)
+        // slice(first_position, last_position) - when using negative values it will starting counting from the end of the array
+        // example: arrayName.slice(-5, -3)
+
+    </script>
+</body>
+</html>

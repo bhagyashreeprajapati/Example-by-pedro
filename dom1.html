@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Document Object Model</title>
+    <style>
+        .highlight {
+            color: #ff0000;
+            font-weight: bold;
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio impedit vel nesciunt reiciendis
+        porro dicta
+        voluptatum exercitationem, iure minima voluptatem magni quasi neque, quisquam magnam, temporibus delectus
+        tempore veniam asperiores.</p>
+    <p class="para">Another paragraph</p>
+    <p id="secPar">Third paragraph</p>
+    <script>
+        
+        // DOM API - Document Object Model - Application Programming Interface
+        
+        // <p> - tag
+            // HTMLCollection - list of all the p elements/tags - array-like - nodelist
+            // create a reference to the second paragraph
+            // document.getElementsByTagName("p")[1]
+            // textContent property reads the contents of an HTML element
+            let content = document.getElementsByTagName("p")[1].textContent;
+            console.log(content);
+            // change the content of an HTML element
+            document.getElementsByTagName("p")[1].textContent = "Changed the second paragraph";
+            
+            let contentSecPar = document.getElementById("secPar").textContent;
+            console.log(contentSecPar);
+            document.getElementById("secPar").textContent = "New content";
+            
+            // injecting HTML
+            // document.getElementById("secPar").textContent = "<strong><em>New content</strong></em>";
+            document.getElementById("secPar").innerHTML = "<strong><em>New content</strong></em>";
+            
+            // Interacting with CSS styles
+            let firstParagraph = document.getElementsByClassName("para")[0];
+            // firstParagraph.style.color = "red";
+            firstParagraph.style.color = "#ff0000";
+            firstParagraph.style.fontWeight = "bold";
+            firstParagraph.style.backgroundColor = "cyan";
+            
+            // querySelector - references 1 HTML element, or the first element in a list of elements
+            // querySelectorAll - references more than 1 HTML element (nodelist)
+            // these methods use CSS selectors to reference the HTML elements
+            // document.querySelectorAll(".para")[0] is equal to document.querySelector(".para")
+            
+            // old way of assigning a class to an HTML element
+            // replaces the existing classes on the element
+            // document.querySelectorAll(".para")[1].className = "highlight";
+            // adds a new class to the existing class list
+            // document.querySelectorAll(".para")[1].className += " highlight";
+            // modern way
+            document.querySelectorAll(".para")[1].classList.add("highlight");
+            
+            
+        </script>
+    </body>
+    </html>

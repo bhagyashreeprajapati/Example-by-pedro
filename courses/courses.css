@@ -1,0 +1,98 @@
+/* -----------------   how to use root ------------------- */
+:root{
+    --main-color: hotpink;
+    --pane-padding: 5px 42px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+/* -----------------   how to use root ------------------- */
+.not-used{
+    background-color: var(--main-color);
+}
+body {
+    max-width: 2090px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notBold {
+    font-weight: 400;
+}
+
+
+#courses {
+    display: flex;
+    column-gap: 30px;
+}
+#courses h3 {
+    font-size: 2em;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#courses section {
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
+    position: relative;
+    min-height: 650px;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+#courses section:hover {
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+    /* top: -20px; */
+    margin-top: -20px;
+}
+
+.coursesTop {
+    position: relative;
+}
+.coursesTop img:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 10px solid #000;
+}
+.highlight {
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.4);
+}
+.highlightRemote {
+    background-color: burlywood;
+}
+.highlightClassroom {
+    background-color: pink;
+}
+.highlightHybrid {
+    background-color: blue;
+    color: white;
+}
+
+.infoImage {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 100px;
+}
+.difficulty {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    padding-bottom: 1px;
+}
+.additionalInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+.additionalInfo p {
+    margin: 0;
+}

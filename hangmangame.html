@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game with javascript</title>
+</head>
+<body>
+    <script>
+        //create a list of words
+        let words=["flower","awkward","subway","whiskey","kiwifruit","zigzag","wristwatch","playground","summer","aaaa","jellyfruit"];
+
+        //generata a random value to choose a words
+        let randomnumber=Math.floor(Math.random()*words.length);
+        let randomwords=words[randomnumber];
+        console.log(randomwords);
+
+        //generate the result string/array
+
+        let result=[];
+        let pos=0;
+        while(pos<randomwords.length){
+            result.push("_");
+            pos++;
+        }
+        console.log(result.join(" "));
+
+        // asking the words from user
+let guessed=false;//flag variable
+while(!guessed){
+        let userLetter=prompt("Give me a Letter(press cancel or Esc to get out the game): " );
+        // letter is null this condition
+        if(userLetter===null){
+            break;
+        }
+        // position increse 
+        for(let pos=0; pos<randomwords.length; pos++){
+            if(randomwords[pos]===userLetter){
+                result[pos]=userLetter
+            }
+        }
+        if(result.join("")===randomwords){
+            guesses=true;
+        }
+        console.log(result.join(" "));
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM API - gallery</title>
+    <!-- <link rel="stylesheet" href="dom4gallery.css"> -->
+    <style>
+        .gallery {
+            text-align: center;
+        }
+        
+        .gallery>img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all 0.5s;
+        }
+        
+        .gallery>img:hover {
+            opacity: 1;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.65);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        
+        .modal>section {
+            border: 10px solid white;
+            position: relative;
+        }
+        
+        .modal img {
+            vertical-align: top;
+        }
+        
+        .closeButton {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: -19px;
+            right: -19px;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+            border-radius: 50%;
+            border: 3px solid #999;
+            cursor: pointer;
+            user-select: none;
+            box-shadow: 3px 3px 5px #000;
+        }
+        
+        .closeButton:hover {
+            background-color: #999;
+            color: white;
+        }
+        
+        .closeButton:active {
+            box-shadow: none;
+            top: -16px;
+            right: -20px;
+        }
+        
+        .title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1rem;
+            background-color: rgb(255, 255, 255, 0.35);
+            margin: 0;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="gallery">
+        <img src="img/Chrysanthemum.jpg" alt="Chrysanthemum" title="Chrysanthemum">
+        <img src="img/Desert.jpg" alt="Desert" title="Desert">
+        <img src="img/Hydrangeas.jpg" alt="Hydrangeas" title="Hydrangeas">
+        <img src="img/Jellyfish.jpg" alt="Jellyfish" title="Jellyfish">
+        <img src="img/Koala.jpg" alt="Koala" title="Koala">
+        <img src="img/Lighthouse.jpg" alt="Lighthouse" title="Lighthouse">
+        <img src="img/Penguins.jpg" alt="Penguins" title="Penguins">
+        <img src="img/Tulips.jpg" alt="Tulips" title="Tulips">
+    </section>
+    
+    <section class="modal">
+        <section>
+            <img src="" class="bigPicture">
+            <span class="closeButton">X</span>
+            <p class="title"></p>
+        </section>
+    </section>
+    <script src="gallery.js"></script>
+</body>
+
+</html>

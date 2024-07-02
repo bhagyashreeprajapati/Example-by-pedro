@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p onclick="console.log('test')">Click me</p>
+    <!-- <script type="text/javascript">
+    <script type="application/ecmascript"> -->
+    <script>
+        // single line comment
+        /*
+          multi
+          line
+          comment  
+        */
+
+        // = - assignment operator
+        // defining a variable
+        // let name = "Pedro Remoaldo";
+        // let name= "Pedro Remoaldo";
+        // let name ="Pedro Remoaldo";
+        let name="Pedro Remoaldo"; // string - text inside double quotes ("") or single quotes ('')
+        console.log(name);
+
+        let city; // declare a variable - default value is "undefined"
+        city="Ermesinde"; // assign a value to the variable / initialize a variable
+        
+        // alert(name);
+        // rules for naming identifiers
+        /*
+        - we can only use letters, numbers and the $ and _ symbols
+            %23u - not allowed
+        - names can not start with a number
+            2ndvalue - not allowed
+        - always use lowercase letters, but if the name of the variable is composed by more than one word you should use camel notation (totalNumberArticles)
+        - do not use accented characteres like ü, ç, ñ, â
+        - use mnemonic names - names with meaning
+       
+        */
+
+        // numbers
+        // 12 is an integer number
+        let totalNumberArticles=12;
+        // 340.34 is a decimal number
+        let totalPrice=340.34;
+        // arithmetic operators
+        let unitPrice=3.45;
+        let numberArticles=10;
+        // operators - +, -, *, /, % (modulus - integer division)
+        let totalPrice1=unitPrice * numberArticles;
+        console.log(totalPrice1);
+        
+        // booleans (true/false)
+        let married=true; // "true" is different from true
+
+        let country="Portugal";
+        console.log(country); // Portugal
+        // let country="India"; // error: Identifier 'country' has already been declared 
+        country="India";
+        console.log(country); // India
+        country="Hrvatska";
+        
+        // toUpperCase() is a string method
+        let countryUppercase=country.toUpperCase();
+        console.log(countryUppercase); // HRVATSKA
+
+        // length - property to get the number of characters in a string
+        console.log(country.length); // 8
+
+        /*
+            = - assignment operator
+            for comparing two values/expressions
+            == - comparison operator - equality operator
+                We are comparing values - "12"==12 - true
+            === - comparison operator - strictly equality operator
+                We are comparing values and type of values - "12"===12 - false
+        */
+        // country==="Hrvatska" is called a condition - a condition always returns true or false
+        if (country==="Hrvatska") { // if the condition is true
+            console.log("Is the country of origin of Jasmina.");
+        } else { // if the condition is false
+            console.log("Not Jasmina's country!");
+        }
+
+        // comparison operators - ==, ===, != (not equal), !== (not equal), >, <, >=, <=
+
+        let value1=23;
+        let value2=45;
+        if (value1>value2) {
+            console.log("Value1 is bigger than value2");
+        } else {
+            console.log("Value2 is bigger than value1"); // <----
+        }
+
+        // country="France";
+        if (country==="Hrvatska") {
+            console.log("Nice weather");
+        } else if (country==="India") {
+            console.log("Spicy food");
+        } else if (country==="Portugal") {
+            console.log("Nice beaches");
+        } else if (country==="Germany") {
+            console.log("Beautiful landscapes");
+        } else {
+            console.log("Another country");
+        }
+
+        switch(country) {
+            case "Hrvatska":
+                console.log("Nice weather");
+                break;
+            case "India":
+                console.log("Spicy food");
+                break;
+            case "Portugal":
+                console.log("Nice beaches");
+                break;
+            case "Germany":
+                console.log("Beautiful landscapes");
+                break;
+            default:
+                console.log("Another country");
+        }
+
+        // loops
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        for (let i=1; i<=10; i=i+1) {
+            console.log(i);
+        }
+        for (let counter=1; counter<=10; counter++) {
+            console.log(counter);
+        }
+        // counter++ is the same as counter=counter+1 and the same counter+=1
+        // counter=counter+2 is the same as counter+=2
+
+        let counter=1;
+        while(counter<=10) {
+            console.log(counter);
+            counter++; // increment the variable by 1
+        }
+        
+        // showing the even numbers between 1 and 10 - 2,4,6,8,10
+        for (let even=2; even<=10; even+=2) {
+            console.log(even);
+        }
+        for (let number=1; number<=10; number++) {
+            if (number % 2 === 0) {
+                console.log(number);
+            }
+        }
+
+        // showing the numbers from 10 to 1
+        for (let number=10; number>0; number--) { // number=number-1 or number-=1
+            console.log(number);
+        }
+
+        // string concatenation
+        let firstName="Pedro";
+        let lastName="Remoaldo";
+        let fullName=firstName+" "+lastName;
+        console.log(fullName); // Pedro Remoaldo
+        console.log("Your full name is: "+fullName); // Your full name is: Pedro Remoaldo
+
+        // template string using backticks (`)
+        let fullName2=`${firstName} ${lastName}`;
+        console.log(fullName2); // Pedro Remoaldo
+
+        let firstChar=fullName.charAt(0);
+        console.log(firstChar); // P
+        let firstChar2=fullName[0];
+        console.log(firstChar2); // P
+
+        // show the characters from a string, each one in its own line        
+        for (let i=0; i<fullName.length; i++) {
+            console.log(fullName[i]);
+            // console.log(fullName.charAt(i));
+        }
+
+        // Pedro Remoaldo
+        let myFirstName1=fullName.substr(0,5); // substr(first_position, number_of_characters)
+        console.log(myFirstName1); // Pedro
+        let myFirstName2=fullName.substring(0,5); // substring(first_position, last_position) - the last position is not taken into account
+        console.log(myFirstName2); // Pedro
+        let myFirstName3=fullName.slice(0,5); // slice(first_position, last_position) - the last position is not taken into account
+        console.log(myFirstName3); // Pedro
+
+        let myLastName1=fullName.substr(6,8);
+        console.log(myLastName1);
+        let myLastName2=fullName.substring(6,14);
+        console.log(myLastName2);
+        let myLastName3=fullName.slice(6,14);
+        console.log(myLastName3);
+        let myLastName4=fullName.slice(-8,fullName.length);
+        console.log(myLastName4);
+
+        // let newName="Miriam Schwartz";
+        let newName="Bhagyashree Charolia";
+        
+        // let position=0;
+        // while (newName.charAt(position)!==" ") {
+        //     position++;
+        // }
+
+        // for (position=0; position<newName.length; position++) {
+        //     if (newName.charAt(position)===" ") {
+        //         break;
+        //     }
+        // }
+
+        let position=newName.indexOf(" "); // finds the position of the first occurrence of the provided character
+        // the lastIndexOf() function starts searching from the end
+
+        let myFirstName4=newName.slice(0,position);
+        console.log(myFirstName4);
+
+        // grab the initials from your name
+        let initials=newName.charAt(0);
+        let positionSpace=newName.indexOf(" ");
+        let secondInitial=newName.charAt(positionSpace+1);
+        initials=initials+secondInitial; // initials+=secondInitial
+
+        let initials2=newName.charAt(0)+newName.charAt(newName.indexOf(" ")+1);
+
+        console.log(initials);
+        console.log(initials2);
+
+    </script>
+</body>
+</html>

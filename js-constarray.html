@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // variable
+        let a=1;
+        a=3;
+        // a="Pedro"; // BAD
+        // constants
+        const name="Pedro";
+        console.log(name); // Pedro
+        // name="Remoaldo"; // Assignment to constant variable.
+        const PI=3.1415;
+        let result=2*PI;
+        console.log(result); // 6.283
+        
+        const temperatures=[ 12, 25, -3, 8 ];
+        temperatures.push(15);
+        temperatures[1]=17;
+        console.log(temperatures); // js6constantsarrays.js:14 (5) [12, 17, -3, 8, 15]
+        // temperatures=[ 3, 18, 25, 5 ]; // Assignment to constant variable.
+        
+        // memory management - stack and heap
+        
+        let b=a;
+        console.log(b); // 3
+        b=10;
+        console.log(b); // 10
+        console.log(a); // 3
+        
+        temperatures.sort();
+        console.log(temperatures); // [-3, 12, 15, 17, 8]
+        const copyTemperatures=temperatures;
+        console.log(temperatures[0]); // -3
+        console.log(copyTemperatures[0]); // -3
+        
+        copyTemperatures[0]=-10;
+        console.log(copyTemperatures[0]); // -10
+        console.log(temperatures[0]); // -10
+        
+        const copy2=temperatures.slice(0);
+        copy2[0]=-20;
+        console.log(copy2[0]); // -20
+        console.log(temperatures[0]); // -10
+        
+        const copy3=[];
+        for (let value of temperatures) {
+            copy3.push(value);
+        }
+        console.log(copy3); // [-10, 12, 15, 17, 8]
+        
+        // spread operator
+        const copy4=[...temperatures];
+        
+        const temp=[ 3, 26, 91, 65, 4];
+        const sortedTemp=[...temp].sort((a,b)=>a-b);
+        console.log(sortedTemp); // [3, 4, 26, 65, 91]
+    </script>
+</body>
+</html>

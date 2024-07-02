@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise - Color Picker</title>
+    <style>
+        #colorPicker {
+            display: flex;
+        }
+        
+        #colorDisplay {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color picker</h1>
+    <section id="colorPicker">
+        <section>
+            <p><label for="red">Red: </label> 0 <input type="range" id="red" min="0" max="255" value="255"> 255</p>
+            <p><label for="green">Green: </label> 0 <input type="range" id="green" min="0" max="255" value="255"> 255
+            </p>
+            <p><label for="blue">Blue: </label> 0 <input type="range" id="blue" min="0" max="255" value="255"> 255</p>
+            <p>Chosen color: <span id="chosenColor">rgb(255,255,255)</span></p>
+        </section>
+        <section id="colorDisplay">
+            
+        </section>
+    </section>
+    
+    <script src="colorpicker.js"></script>
+    
+</body>
+
+</html>

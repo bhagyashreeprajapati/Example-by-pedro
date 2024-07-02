@@ -1,0 +1,40 @@
+#tabs {
+  border: 1px solid #000;
+  width: 300px;
+}
+
+#tabslist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#tabslist li {
+  flex: 1;
+}
+
+#tabslist a {
+  color: white;
+  background-color: grey;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+}
+
+#tabslist a.active,
+#tabslist a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* #tabsContent section:not(:first-of-type) { */
+.hide {
+  display: none;
+}
+
+#tabsContent {
+  padding: 10px;
+}

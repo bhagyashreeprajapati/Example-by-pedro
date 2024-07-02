@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About fuction</title>
+</head>
+<body>
+    <h1>About fuction javascript </h1>
+    <script>
+        function showMessage(){
+            console.log("Hello world");
+        }
+        // invoking fuction
+        showMessage();
+        
+        function showMessagepar(msg){
+            console.log(msg);
+        }
+        // invoking fuction
+        showMessagepar("Hello Fuction");
+        
+        
+        function addvalue(value1, value2){
+            let result=value1+value2;
+            console.log(result);
+        }
+        addvalue(3,10);
+        
+        function add(value1, value2){
+            let result=value1+value2;
+            return result;
+        }
+        console.log(add(3,7));
+        let result=add(3,8);
+        console.log(result); 
+        
+        // reverse string
+        
+        function reverse(word){
+            let invertword = word.split('').reverse().join('');
+            return invertword;
+        //     let invertword ="";
+        //     for (let i = word.length - 1; i >= 0; i--) {
+        //         // invertword += word[i];
+
+        //         invertword+=word.charAt(i);
+        //     }
+        //     return invertword;
+        // }
+
+        // for(let letter of word ){
+        //     invertword=letter+invertword;
+        // }
+        // return invertword;
+    }
+        let reversestring =reverse("remoaldo");
+        console.log(reversestring);
+        // other way
+        console.log(reverse("pedro"));
+
+
+        //scope
+
+        let city="Hamburg global variable"; // global scope
+        console.log(city);
+        function whichcity(city){
+            console.log(city);
+
+        }
+        whichcity("ahmedabad local variable");
+        function whichtown(){
+            let city="Berlin local variable"; // local variable local scope
+            console.log(city);
+        }
+        whichtown();
+
+        // block scope
+        let country;
+        if(city==="Gujarat")
+        {   //let create block scope variable
+             country="Gujarat";
+        }else{
+             country="other country";
+        }
+        console.log(country);
+
+
+        
+        if(city==="Ermesinde")
+        {   //var does not block scope variable
+             var country2="portugal";
+        }else{
+             var country2="other country";
+        }
+        console.log(country2);
+
+        for(let i=0; i<=10; i++){
+            console.log(i);
+        }
+        console.log(i); // undefind variable
+
+
+        for(var i=0; i<=10; i++){
+            // console.log(i);
+        }
+        console.log(i); // 11
+    </script>
+    
+</body>
+</html>
